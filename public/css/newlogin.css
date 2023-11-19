@@ -1,0 +1,220 @@
+/* 通用樣式重置，設定全域元素的邊距、內距、盒模型、字型 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+}
+
+/* Body 元素樣式 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../img/login/login-paage.webp)no-repeat; /* 背景圖片 */
+    background-size: cover;
+    background-position: center;
+}
+
+/* 主容器樣式 */
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: transparent; /* 透明背景 */
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px); /* 模糊背景效果 */
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height .2s ease; /* 高度變化動畫效果 */
+}
+
+/* 激活狀態下的容器高度增加 */
+.wrapper.active {
+    height: 520px;
+}
+
+/* 登入和註冊表單的基本樣式 */
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+/* 登入表單的樣式 */
+.wrapper .form-box.login {
+    /* display: none; */
+    transition: transform .18s ease; /* 平移動畫效果 */
+    transform: translateX(0);
+}
+
+/* 在激活狀態下，將登入表單向左平移，隱藏起來 */
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+/* 註冊表單的樣式 */
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+/* 在激活狀態下，將註冊表單向右平移，顯示出來 */
+.wrapper.active .form-box.register {
+    transition: transform .18s ease; /* 平移動畫效果 */
+    transform: translateX(0);
+}
+
+/* 表單標題的樣式 */
+.form-box h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* 輸入框的樣式 */
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+/* 輸入框標籤的樣式 */
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s; /* 標籤移動動畫效果 */
+}
+
+/* 當輸入框被選中或有內容時，標籤上移 */
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+/* 輸入框的樣式 */
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent; /* 透明背景 */
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+/* 輸入框右側的圖示樣式 */
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+/* 記住我和忘記密碼的樣式 */
+.remember-forgot {
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 复选框樣式 */
+.remember-forgot label input {
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+/* 忘記密碼連結樣式 */
+.remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+}
+
+/* 鼠标懸停時忘記密碼連結的樣式 */
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* 登入和註冊按鈕的樣式 */
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    color: azure;
+    font-size: 2em;
+    cursor: pointer;
+    transition: 0.5s; /* 按鈕背景和文字顏色變化動畫效果 */
+}
+
+/* 鼠标懸停時按鈕的樣式 */
+.btn:hover {
+    background: #224158;
+    color: rgb(225, 203, 75);
+}
+
+/* 登入和註冊連結的樣式 */
+.longin-register {
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+/* 登入連結和註冊連結的樣式 */
+.longin-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+/* 鼠标懸停時登入連結和註冊連結的樣式 */
+.longin-register p a:hover {
+    text-decoration: underline;
+}
+
+/* 關閉圖示的樣式 */
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* 關閉圖示內的連結樣式 */
+.wrapper .icon-close a {
+    color: inherit;
+    text-decoration: none;
+}
+

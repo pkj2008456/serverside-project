@@ -1,0 +1,77 @@
+<html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 字元集和視窗設定的元資料 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 連結到外部 CSS 檔案 -->
+    <!-- <link rel="stylesheet" href="css/newlogin.css"> -->
+
+    <link rel="stylesheet" href="/css/read.css">
+
+    <!-- 頁面標題 -->
+    <title>Read</title>
+</head>
+
+<body>
+    <!-- 包含登入和註冊表單的容器 -->
+    <div class="wrapper">
+        <!-- 關閉圖示，連結回首頁 -->
+
+        <!-- 登入表單 -->
+        <div class="form-box login">
+            <h2>Check ur imformation</h2>
+            <!-- 登入表單包括user、密碼-->
+            <!-- <form action="/delete" method="get" onsubmit="return validateForm()"> -->
+                <!-- user輸入框 -->
+                <form action="/read" method="get">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="people-circle-outline"></ion-icon></span>
+                    <input type="text" name="UserID" required >
+                    <label>User ID</label>
+                </div>
+
+                <!-- 密碼輸入框 -->
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="create-outline"></ion-icon></span>
+                    <input type="password" name="newPassword"  >
+                    <label>password</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <input type="text" name="name" >
+                    <label>Username</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    <input type="text" name="phonenum" >
+                    <label>phone number</label>
+                </div>
+
+
+                <!-- 登入按鈕 -->
+                <button type="submit" class="btn">get imformation</button>
+
+
+                </div>
+            </form>
+        </div>
+
+       
+    </div>
+
+    <!-- Ionicons 腳本用於圖示 -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+
+</body>
+
+</html>
+</html>

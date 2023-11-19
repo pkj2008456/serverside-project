@@ -1,0 +1,182 @@
+body, html
+{
+    margin: 0; padding: 0; height: 100%; overflow: hidden;
+}
+
+#content
+{
+    position:relative; left: 0; right: 0; bottom: 0; top: 0px; 
+} 
+ul li{
+    font-size:20px;
+    position: relative;
+    padding-right: 1px;            
+}
+ .top{
+    background: lightblue;
+} 
+.link{
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: #777;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-caption {
+    bottom: 330px;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+.navbar-light .navbar-brand {
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color:black;
+}
+
+.navbar-toggler {
+    background: #fff;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.nav-link {
+    padding: .2rem 1rem;
+}
+
+.nav-link.active,.nav-link:focus{
+    color: #fff;
+}
+
+.navbar-toggler {
+    padding: 1px 5px;
+    font-size: 18px;
+    line-height: 0.3;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: aqua;
+}
+
+.nav-item .dropdown .nav-link.logout-btn {
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.link-area {
+    position:fixed;
+    bottom:20px;
+    left:20px;  
+    padding:15px;
+    border-radius:40px;
+    background:tomato;
+}
+
+.link-area a {
+    text-decoration:none;
+    color:#fff;
+    font-size:25px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}       
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 6px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: transparent;}
+
+.dropdown-heading{
+    padding: 8px 12px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    font-family: inherit;
+    text-transform: uppercase;
+    box-shadow: 8px 8px 16px 16px rgba(0,0,0,0.1);
+}
+
+.dropdown-links{
+    display: block;
+    grid-template-columns: 100px 100px;
+    font-size: 18px;
+    color: white;
+    font-style: italic; 
+    flex-direction: column;
+    gap: .2rem;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+}
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+    
+}
